@@ -1,11 +1,17 @@
-#include "raiz.h"
 #include <stdio.h>
-#include <math.h>
+#include "sistlinear.h"
 
-int main (void){
-	int Inters,Iqi;
-	double raiz,raiz2;
-	Inters = bissecao(2.0,6.0,6, cos, &raiz);
-	Iqi = IQI(1.0,5.0,6.0,6,sin,&raiz2);
+int main(){
+	int i,j, indice = 9;
+	double **M;
+	int *p;
+	for(i=0; i < 3; i++){
+		for(j=0; j < 3; j++){
+			M[i][j] = indice;
+			indice--;
+		}
+	}
+	fatoracao(3,M,p);
+	imprimeMat(M,3);
 	return 0;
 }
